@@ -28,7 +28,7 @@
   <header>
     <p class="app">Time &amp; Sales for Kalshi</p>
     <h1>Privacy Policy</h1>
-    <p class="date">Effective date: November 19, 2026</p>
+    <p class="date">Effective date: November 20, 2026</p>
     <p>Time &amp; Sales for Kalshi published under Android package <code>com.vaultedholdings.timesales</code> is provided by <strong>VAULTED HOLDINGS LLC</strong>. This policy explains how the Android app and this policy webpage handle information. For privacy questions or requests, email <a href="mailto:bonzocrypt@gmail.com">bonzocrypt@gmail.com</a>.</p>
     <p>This policy also covers the original personal-account edition, Android package <code>com.eventpricing.timesales</code>, provided by <strong>Daniel Belliveau</strong>. In this policy, "we," "us," "our," and "the developer" refer to the provider of the edition you use.</p>
   </header>
@@ -38,7 +38,8 @@
 
   <h2>1. Kalshi credentials and connections</h2>
   <p>You can choose public market access without an account or API key. This mode requests real market data periodically from Kalshi without attaching credentials. Kalshi still receives your IP address and the market identifiers and request details needed to provide that data. A separate, clearly labeled demo generates simulated market data locally.</p>
-  <p>For optional streaming access, you may enter your own Kalshi API Key ID and RSA private key. Use a key with read-only permissions. The app saves these credentials using the device's secure storage and loads the private key into memory to authenticate requests. The public-data feed does not use saved credentials. The private key itself is not sent to Kalshi, Expo, or the developer.</p>
+  <p>For optional streaming access, you may enter your own Kalshi API Key ID and RSA private key, import a key file, or scan a setup QR code in supported versions. Use a key with read-only permissions. The app saves these credentials using the device's secure storage and loads the private key into memory to authenticate requests. QR setup checks an authenticated streaming connection directly with Kalshi before saving. The public-data feed does not use saved credentials. The private key itself is not sent to Kalshi, Expo, or the developer.</p>
+  <p>File import reads the file you select on your device and removes the app's temporary picker copy after processing. Your original downloaded or transferred file remains under your control; remove transfer copies when no longer needed and keep any backup secure.</p>
   <p>Authenticated requests sent directly to Kalshi include your API Key ID, a timestamp, and a digital signature. Kalshi also receives your IP address and the market identifiers or other request details needed to provide the data you request. These connections use HTTPS or secure WebSockets. Kalshi can associate authenticated requests with your Kalshi account.</p>
   <p>The app requests market information, public trade prints, order books, and available event context. It does not request your portfolio, personal order history, balance, bank information, identity documents, or Kalshi password. It does not place orders or transfer money. Kalshi handles information it receives under its <a href="https://kalshi.com/docs/kalshi-privacy-policy.pdf">own privacy policy</a>.</p>
 
@@ -53,7 +54,7 @@
 
   <h2>4. Notifications, permissions, and advertising</h2>
   <p>If you enable signal alerts and grant notification permission, the app can generate notifications locally on your device. The current app does not register for Expo's remote push-notification service. You can disable alerts in the app or turn off its notifications in Android settings. Notification content can appear on your lock screen depending on your device settings.</p>
-  <p>The app does not request access to your contacts, camera, microphone, or precise device location. It contains no advertising SDK or advertising tracking and does not sell or rent your personal information. There is no separate behavioral-analytics SDK; the update-related technical information described above is still processed by Expo.</p>
+  <p>In versions with QR setup, camera permission is optional and requested when you choose to scan a setup code. Camera frames are processed locally to recognize the QR code; the app does not save or upload camera images, record video, or record audio. You can deny camera permission and use file import, manual entry, or public market data instead. The app does not request contacts, microphone, or precise device location access. It contains no advertising SDK or advertising tracking and does not sell or rent your personal information. There is no separate behavioral-analytics SDK; the update-related technical information described above is still processed by Expo.</p>
 
   <h2>5. Support and privacy requests</h2>
   <p>If you contact <a href="mailto:bonzocrypt@gmail.com">bonzocrypt@gmail.com</a>, we receive your email address, any name you provide, and the content and attachments you choose to send. We use them to respond, investigate reported problems, and handle privacy requests. Please do not send API keys, private keys, passwords, or financial-account details.</p>
@@ -77,6 +78,7 @@
 
   <h2>9. This webpage</h2>
   <p>This policy page is hosted on GitHub Pages. GitHub logs visitor IP addresses for security and processes other technical information under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>. This page adds no analytics scripts, advertising, tracking cookies, or submission forms.</p>
+  <p>The optional <a href="connect/">desktop setup page</a> is hosted by GitHub Pages as well. Selecting a private-key file and entering a Key ID processes those values locally in your browser to generate a QR code; the setup page does not upload these values, store them in browser storage, or put them in a URL. It clears the displayed code after two minutes or when the page is hidden or closed. The QR code contains your private key: do not share, photograph, or display it to others. Clearing a QR code does not revoke the underlying key; revoke it in Kalshi if exposed. Sharing the public setup link does not include credentials.</p>
 
   <h2>10. Changes and contact</h2>
   <p>We will update this policy when the app's data practices change and revise the effective date above. Where required, material changes will also be explained in the app or through an appropriate notice before new processing begins.</p>
@@ -85,3 +87,5 @@
 </main>
 </body>
 </html>
+
+
